@@ -2,7 +2,9 @@
 title: "Introduction to Unix Operating Systems"
 author: "Cedric Arisdakessian"
 date: "2022-08-15"
-output: beamer_presentation
+output: 
+  beamer_presentation:
+    theme: "Antibes" 
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "pdf/") })
 editor_options: 
@@ -14,7 +16,7 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE, include=TRUE)
 ```
 
-# Day 1: The linux file system
+# Part 1: The linux file system
 *** 
 
 ## Recommendations
@@ -79,7 +81,7 @@ ex: `../data/my_file.csv` (if my current folder is `src/`)
   - ...
 - Note: Hidden files start with "."
 
-# Day 2: Bash syntax
+# Part 2: Bash syntax
 *** 
 
 ## Variables
@@ -156,7 +158,7 @@ awk -F, '$2 > 1' metadata.csv | wc -l
 cut -d, -f5 data.csv | sort | uniq -c > freqs.txt
 ```
 
-# Day 2: Useful linux commands
+# Part 3: Useful linux commands
 *** 
 
 ## Basic commands
@@ -259,7 +261,7 @@ md5sum -c md5sum.txt
 -   `sed`
 -   `awk`
 
-# Day 3: Customization and history search
+# Part 4: Customization and history search
 
 ***
 
