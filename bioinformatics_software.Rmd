@@ -1,0 +1,40 @@
+---
+title: "Useful bioinformatics command-line tools"
+author: "Cedric Arisdakessian"
+date: "2022-08-15"
+output: pdf_document
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = "pdf/") })
+editor_options: 
+  markdown: 
+    wrap: 90
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, include=TRUE)
+```
+
+Before using any of the following tools, don't underestimate the power of basic linux
+tools such as less, grep, awk, cut, uniq, wc
+
+## Sequence processing
+
+-   **seqtk** (easy and fast) or **seqkit** (more powerful, but more complex)
+-   **emboss**: suite of bioinformatics programs for sequence analysis:
+    -   translation (with ORF identification)
+    -   N-W alignments
+    -   transformation, such as reverse complements
+    -   sequence summary
+-   **bioawk**
+
+## Alignment
+
+-   local sequence alignment: **blast** or **diamond** (faster but less sensitive)
+-   fast global sequence alignment: **minimap2**
+-   reads on contigs: **bwa** or **bowtie2**
+
+## QC
+
+-   **fastqc**
+-   **multiqc**
+-   **quast**
