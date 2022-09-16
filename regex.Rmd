@@ -1,8 +1,11 @@
 ---
-title: "Introduction to regular expressions"
+title: "Introduction to Regular Expressions"
 author: "Cedric Arisdakessian"
-date: "2022-08-10"
-output: pdf_document
+date: "2022-09-02"
+fontsize: 10pt
+output:
+  beamer_presentation:
+    theme: "Antibes"
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "pdf/") })
 editor_options: 
@@ -31,13 +34,13 @@ the same island.
 
 ## How would you fix this issue?
 
-1)  You don't have that many samples, you can just fix it manually.
+1.  You don't have that many samples, you can just fix it manually.
 
-2)  You decide to hire an intern to fix it.
+2.  You decide to hire an intern to fix it.
 
-3)  You look for all possible patterns in excel and replace them.
+3.  You look for all possible patterns in excel and replace them.
 
-4)  You have too many samples and you're not sure of all the spellings. You decide to
+4.  You have too many samples and you're not sure of all the spellings. You decide to
     learn regular expressions.
 
 ## What are regular expressions {.smaller}
@@ -62,14 +65,14 @@ that with the `grepl(pattern, text)` function.
 
 ## Before we start
 
-The regex language uses specific symbols to add meaning, such as ".", "-". It can be a
-problem when you're looking for those specific patterns in the text since you don't know
-whether you're referring to the original symbol or its meaning in the regex standard. By
-default, it will be assumed that you mean the regex interpretation. If you mean to match
-the actual symbol, you need to escape the value with a backslash (e.g. `\.` for a litteral
-dot)
+- The regex language uses common characters to express patterns of text (ex: `-`, `?`, `.`)
+- What if you need to look for one of them in a text? 
 
-In R, you will need 2 backslashes (don't ask me why)
+  $\Rightarrow$ By default, it will be assumed that you mean the regex interpretation.
+  
+  $\Rightarrow$ If you mean to match the actual symbol, you need to escape it (e.g. `\.` for a literal
+dot). In R, you will need 2 backslashes.
+
 
 ## Dot symbol
 
@@ -133,7 +136,7 @@ grepl("[A-Za-z0-9 ]", c("A", "a", "3", " "))
 
 ## Repetition of symbols
 
--   `"*"` refers to 0 or more repetition of the previous pattern
+-   `"*"` refers to 0 or more repetition of the previous pattern.  Note that it's a bit different that its meaning as a glob pattern.
 -   `"+"` refers to 1 or more repetition of the previous pattern
 
 ```{r}

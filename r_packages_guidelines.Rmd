@@ -2,6 +2,7 @@
 title: "Guidelines for managing R packages"
 author: "Cedric Arisdakessian"
 date: '2022-07-28'
+fontsize: 10pt
 output: pdf_document
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_dir = "pdf/") })
@@ -31,6 +32,8 @@ With the `devtools` R library, you can build your own library directly from a gi
 
     -   Dependencies, either mandatory (in the "Imports" category) or optional (in the "Suggests" category).
 -   `NAMESPACE` file (automatically generated or updated each time `devtools::document()` is called. It contains all the function that should be available to the user when using the package.
+
+***
 
 [Optional]{.underline}:
 
@@ -67,7 +70,11 @@ greet <- function(first_name, last_name) {
 }
 ```
 
-Although we know how this function works, another person might not understand it. Thus, we need to provide documentation about what it does and how to use it. All the documentation is written before the function definition, and start with the 2 characters `#'` (pound + single quote). The documentation entries are split into different categories, such as the description, parameters, return values, etc.. Depending on the category, the syntax of a documentation entry can be (you will need to replace flag / name / descr with the appropriate value):
+Although we know how this function works, another person might not understand it. Thus, we need to provide documentation about what it does and how to use it. All the documentation is written before the function definition, and start with the 2 characters `#'` (pound + single quote). The documentation entries are split into different categories, such as the description, parameters, return values, etc.. 
+
+***
+
+Depending on the category, the syntax of a documentation entry can be (you will need to replace flag / name / descr with the appropriate value):
 
 A. `#' text`\
 B. `#' @flag descr`\
@@ -80,6 +87,8 @@ In fact, you don't have to provide any documentation to your function. However, 
 3.  Return value (syntax B, flag: @return)
 4.  **Important**: If you want the function to be available in the package, you need to add a line with the flag `@export`
 5.  Examples (syntax B, flag: `@examples`). It is a good practice to provide the user some examples of how to use the function. Each example is written in a new line starting with `#'`
+
+***
 
 See below an example for the documentation of our `greet()` function:
 
@@ -97,7 +106,7 @@ greet <- function(first_name, last_name="") {
   return(msg)
 }
 ```
-
+***
 For more examples, see the labhuiofrank github repository [here](https://github.com/labhuiofrank/16S-data-analysis/tree/master/R)
 
 Once you have added your new functions, you will need to update the package. Go to root of the github repository folder, and run the following commands:

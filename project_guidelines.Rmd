@@ -17,7 +17,7 @@ This document provide some guidelines when analyzing data your own projects.
 
 ## 1. Clarity
 
-When analyzing data, many people dive right in to the code and cary on until it produces the outputs they are expecting. Once it works, they save the file, export the figures, share it and move on. Unless you are a very experienced coder and can write excellent code on the first try, this is usually not a good idea for several reasons:
+When analyzing data, many people dive right in to the code and carry on until it produces the outputs they are expecting. Once it works, they save the file, export the figures, share it and move on. Unless you are a very experienced coder and can write excellent code on the first try, this is usually not a good idea for several reasons:
 
 -   As your project advances, you will need to adjust some parts of your code, maybe add a few steps, change some parameters. If your code is not clear and badly structured, it will take you much more time and energy to do those changes.
 -   Other people might not be be able to help you: If the code is congested/complicated, it will take them much more concentration and motivation to understand what you're doing. Even if they do, they might just be burnt out by the time they actually get to the core of the issue.
