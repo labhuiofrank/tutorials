@@ -269,8 +269,8 @@ Either:
 ***
 ### Shared folder
 
+- File permissions (owner/group/other, read/write/execute)
 - Mac computers have by default a folder called "Public" that any user can access
-- You can find and retrieve many project data in the labhuiofrank's Public folder at `/Users/labhuiofrank/Public`
-- Let's talk about access and file permissions
+- You can find and retrieve many project data in the labhuiofrank's Public folder at `/Users/labhuiofrank/Public`. Let's create now a symbolic link to it (for Rstudio).
 - We could also store databases in this folder as well (i.e. pathogens, primers, ...)
 
